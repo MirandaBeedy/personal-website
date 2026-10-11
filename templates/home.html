@@ -15,5 +15,22 @@
         I enjoy hiking, reading, painting, spending time with
         my family, and hanging out with my dogs.
     </p>
+
+    
+<h2>My Personal Goals</h2>
+
+<ul>
+    {% for goal in goals %}
+        <li>
+            {{ goal.name }}
+            {% if goal.completed %}
+                - Completed
+            {% else %}
+                - In progress
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+
 {% endblock content %}
 
